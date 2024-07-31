@@ -7,6 +7,7 @@ import HomePage from "./Home.jsx"
 import "./index.css"
 import Item from "./Item.jsx"
 import theme from "./theme.jsx"
+import Cart from "./cart.jsx"
 
 const router = createBrowserRouter([
 	{
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
 	{
 		path: "/item",
 		element: <Item />,
+	},
+	{
+		path: "/cart",
+		element: <Cart />,
 	},
 	{
 		path: "/checkout",

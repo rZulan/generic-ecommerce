@@ -4,7 +4,7 @@ import { red } from "@mui/material/colors"
 const theme = responsiveFontSizes(
 	createTheme({
 		palette: {
-			primary: { main: red[500] },
+			primary: { main: red[300] },
 		},
 	})
 )
