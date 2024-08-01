@@ -117,6 +117,25 @@ const HomePage = () => {
 			</div>
 		</div>
 		
+		<div className="flex flex-wrap h-16 bg-sky-950 mt-10">
+			<div className="pl-10 pt-5">
+				<Typography color={'white'}>© 2024 Zulan Productions</Typography>
+			</div>
+
+			<div className="flex flex-1 justify-end gap-9 pr-10">
+				<div className="pl-5 pt-5">
+					<Link>
+						<Typography color={'white'}>Terms and Conditions</Typography>
+					</Link>
+				</div>
+				<div className="pl-5 pt-5">
+					<Link>
+						<Typography color={'white'}>Privacy Policy</Typography>
+					</Link>
+				</div>
+			</div>
+
+		</div>
 		</>
 	)
 }
