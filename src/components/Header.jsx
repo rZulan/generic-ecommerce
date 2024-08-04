@@ -22,7 +22,7 @@ const Header = () => {
 					/>
 				</div>
 				<div className="flex flex-row justify-end flex-1 gap-5">
-					<h1>Cart</h1>
+					<Link to={"/cart"}>Cart</Link>
 					<h1>Logout</h1>
 				</div>
 			</div>
