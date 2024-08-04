@@ -1,3 +1,4 @@
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
 import { TextField } from "@mui/material"
 import { Link } from "react-router-dom"
 
@@ -22,7 +23,9 @@ const Header = () => {
 					/>
 				</div>
 				<div className="flex flex-row justify-end flex-1 gap-5">
-					<Link to={"/cart"}>Cart</Link>
+					<Link to={"/cart"}>
+						<ShoppingCartIcon />
+					</Link>
 					<h1>Logout</h1>
 				</div>
 			</div>

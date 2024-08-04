@@ -1,3 +1,4 @@
+import AccessAlarmIcon from "@mui/icons-material/AccessAlarm"
 import { Box, Button, LinearProgress, Rating, Typography } from "@mui/material"
 import { useState } from "react"
 import Slider from "react-slick"
@@ -32,7 +33,8 @@ const Item = () => {
 	return (
 		<>
 			<Header />
-			<div className="w-3/4 m-auto">
+			<AccessAlarmIcon />
+			<div className="w-3/4 m-auto mt-10">
 				<div className="flex">
 					<div className="flex flex-col bg-slate-400">
 						<img src="https://picsum.photos/400" className="w-96" />
