@@ -2,6 +2,7 @@ import { ThemeProvider } from "@mui/material"
 import React from "react"
 import ReactDOM from "react-dom/client"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Browse from "./Browse.jsx"
 import Cart from "./cart.jsx"
 import Checkout from "./Checkout.jsx"
 import HomePage from "./Home.jsx"
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <HomePage />,
+	},
+	{
+		path: "/browse",
+		element: <Browse />,
 	},
 	{
 		path: "/item",
