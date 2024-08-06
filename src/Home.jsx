@@ -1,12 +1,30 @@
-import { Avatar, Button, Link, Typography } from "@mui/material"
+import { Avatar, Box, Button, Link, Rating, Typography } from "@mui/material"
 import itemUnavailable from './assets/item sample.jpg'
 import notFound from './assets/not found.jpg'
 import noData from './assets/no data.jpg'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useState } from "react";
+import StarIcon from '@mui/icons-material/Star';
+import Header from "./components/Header";
 
+const labels = {
+	0.5: 'Useless',
+	1: 'Useless+',
+	1.5: 'Poor',
+	2: 'Poor+',
+	2.5: 'Ok',
+	3: 'Ok+',
+	3.5: 'Good',
+	4: 'Good+',
+	4.5: 'Excellent',
+	5: 'Excellent+',
+};
 
+function getLabelText(value) {
+	return `${value} Star${value !== 1 ? 's' : ''}, ${labels[value]}`;
+}
 
 const HomePage = () => {	
 		var settings = {
@@ -18,6 +36,10 @@ const HomePage = () => {
 			autoplaySpeed: 3500,
 			pauseOnHover: true
 		};
+
+		const [value, setValue] = useState(4);
+ 		const [hover, setHover] = useState(-1);
+
 		return (
 		<>
 		<div className="flex justify-center h-8 bg-sky-950">
@@ -26,32 +48,7 @@ const HomePage = () => {
 			</div>
 		</div>
 
-		<div className="flex flex-wrap">
-			<div className='flex flex-1 pt-10 pl-10 gap-5 '>
-				<div>
-					<Link href="/item" variant="h5">
-						<Typography variant="h5">Item</Typography>
-					</Link>
-				</div>
-				<div>
-					<Link href="/cart" variant="h5">
-						<Typography variant="h5">Cart</Typography>
-					</Link></div>
-				<div>
-					<Link href="/checkout">
-						<Typography variant="h5">Checkout</Typography>
-					</Link>
-				</div>
-			</div>
-
-			<div className="flex flex-1 flex-grow justify-center pt-1">
-				<Typography variant="h2">Zulan</Typography>
-			</div>
-			
-			<div className="flex flex-1 justify-end pt-8 pr-10">
-				<Avatar>A</Avatar>
-			</div>
-		</div>
+		<Header/>
 
 		<div className="flex justify-center pt-10"><Typography variant="h4">New Collection</Typography></div>
 		<div className="flex justify-center"><Typography>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, facilis.</Typography></div>
@@ -62,6 +59,30 @@ const HomePage = () => {
 				<Typography variant="h6" ><b>Item Name</b></Typography>
 				<Typography variant="caption" display='block'>This is the description of the item.</Typography>
 				<Typography variant="h6" display='block'><b>$0</b></Typography>
+				<Box
+					sx={{
+						width: 200,
+						display: 'flex',
+						alignItems: 'center',
+					}}
+					>
+					<Rating
+						name="hover-feedback"
+						value={value}
+						precision={0.5}
+						getLabelText={getLabelText}
+						onChange={(event, newValue) => {
+						setValue(newValue);
+						}}
+						onChangeActive={(event, newHover) => {
+						setHover(newHover);
+						}}
+						emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+					/>
+					{value !== null && (
+						<Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+					)}
+				</Box>
 			</div>
 
 			<div className="grid text-left ">
@@ -69,6 +90,30 @@ const HomePage = () => {
 				<Typography variant="h6" ><b>Item Name</b></Typography>
 				<Typography variant="caption" display='block'>This is the description of the item.</Typography>
 				<Typography variant="h6" display='block'><b>$0</b></Typography>
+				<Box
+					sx={{
+						width: 200,
+						display: 'flex',
+						alignItems: 'center',
+					}}
+					>
+					<Rating
+						name="hover-feedback"
+						value={value}
+						precision={0.5}
+						getLabelText={getLabelText}
+						onChange={(event, newValue) => {
+						setValue(newValue);
+						}}
+						onChangeActive={(event, newHover) => {
+						setHover(newHover);
+						}}
+						emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+					/>
+					{value !== null && (
+						<Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+					)}
+				</Box>
 			</div>
 
 			<div className="grid text-left ">
@@ -76,6 +121,30 @@ const HomePage = () => {
 				<Typography variant="h6" ><b>Item Name</b></Typography>
 				<Typography variant="caption" display='block'>This is the description of the item.</Typography>
 				<Typography variant="h6" display='block'><b>$0</b></Typography>
+				<Box
+					sx={{
+						width: 200,
+						display: 'flex',
+						alignItems: 'center',
+					}}
+					>
+					<Rating
+						name="hover-feedback"
+						value={value}
+						precision={0.5}
+						getLabelText={getLabelText}
+						onChange={(event, newValue) => {
+						setValue(newValue);
+						}}
+						onChangeActive={(event, newHover) => {
+						setHover(newHover);
+						}}
+						emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+					/>
+					{value !== null && (
+						<Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+					)}
+				</Box>
 			</div>
 
 			<div className="grid text-left ">
@@ -83,6 +152,30 @@ const HomePage = () => {
 				<Typography variant="h6" ><b>Item Name</b></Typography>
 				<Typography variant="caption" display='block'>This is the description of the item.</Typography>
 				<Typography variant="h6" display='block'><b>$0</b></Typography>
+				<Box
+					sx={{
+						width: 200,
+						display: 'flex',
+						alignItems: 'center',
+					}}
+					>
+					<Rating
+						name="hover-feedback"
+						value={value}
+						precision={0.5}
+						getLabelText={getLabelText}
+						onChange={(event, newValue) => {
+						setValue(newValue);
+						}}
+						onChangeActive={(event, newHover) => {
+						setHover(newHover);
+						}}
+						emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+					/>
+					{value !== null && (
+						<Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+					)}
+				</Box>
 			</div>
 
 			<div className="grid text-left ">
@@ -90,6 +183,30 @@ const HomePage = () => {
 				<Typography variant="h6" ><b>Item Name</b></Typography>
 				<Typography variant="caption" display='block'>This is the description of the item.</Typography>
 				<Typography variant="h6" display='block'><b>$0</b></Typography>
+				<Box
+					sx={{
+						width: 200,
+						display: 'flex',
+						alignItems: 'center',
+					}}
+					>
+					<Rating
+						name="hover-feedback"
+						value={value}
+						precision={0.5}
+						getLabelText={getLabelText}
+						onChange={(event, newValue) => {
+						setValue(newValue);
+						}}
+						onChangeActive={(event, newHover) => {
+						setHover(newHover);
+						}}
+						emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+					/>
+					{value !== null && (
+						<Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+					)}
+				</Box>
 			</div>
 
 			<div className="grid text-left ">
@@ -97,6 +214,30 @@ const HomePage = () => {
 				<Typography variant="h6" ><b>Item Name</b></Typography>
 				<Typography variant="caption" display='block'>This is the description of the item.</Typography>
 				<Typography variant="h6" display='block'><b>$0</b></Typography>
+				<Box
+					sx={{
+						width: 200,
+						display: 'flex',
+						alignItems: 'center',
+					}}
+					>
+					<Rating
+						name="hover-feedback"
+						value={value}
+						precision={0.5}
+						getLabelText={getLabelText}
+						onChange={(event, newValue) => {
+						setValue(newValue);
+						}}
+						onChangeActive={(event, newHover) => {
+						setHover(newHover);
+						}}
+						emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+					/>
+					{value !== null && (
+						<Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+					)}
+				</Box>
 			</div>
 		</div>
 

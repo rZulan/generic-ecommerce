@@ -5,11 +5,12 @@ import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';  
 import { Link } from 'react-router-dom';
-import { Avatar, FormGroup, Paper, TextField } from '@mui/material';
+import { FormGroup, Paper, TextField } from '@mui/material';
 import { useState } from 'react';
 import EWalletIcon from './assets/eWalletIcon.png'
 import BankIcon from './assets/bankIcon.png'
 import CODIcon from './assets/cashOnDeliveryIcon.png'
+import Header from './components/Header';
 
 
 const steps = ['Shipping and Gift Options', 'Payment and Billing', 'Review and Place Order'];
@@ -37,32 +38,7 @@ const Checkout = () => {
 				</div>
 			</div>
 
-			<div className="flex flex-wrap">
-				<div className='flex flex-1 pt-10 pl-10 gap-5 '>
-					<div>
-						<Link href="/item" variant="h5">
-							<Typography variant="h5">Item</Typography>
-						</Link>
-					</div>
-					<div>
-						<Link href="/cart" variant="h5">
-							<Typography variant="h5">Cart</Typography>
-						</Link></div>
-					<div>
-						<Link href="/checkout">
-							<Typography variant="h5">Checkout</Typography>
-						</Link>
-					</div>
-				</div>
-
-				<div className="flex flex-1 flex-grow justify-center pt-1">
-					<Typography variant="h2">Zulan</Typography>
-				</div>
-				
-				<div className="flex flex-1 justify-end pt-8 pr-10">
-					<Avatar>A</Avatar>
-				</div>
-			</div>
+			<Header/>
 
 			<div className='flex justify-center'>
 				<Box sx={{ width: '75%', paddingTop: 10}}>
@@ -134,7 +110,10 @@ const Checkout = () => {
 						</Button>
 						<Box sx={{ flex: '1 1 auto' }} />
 						<Button onClick={handleReset}>Reset</Button>
-						<Button onClick={handleNext}>
+						<Button 
+						onClick={handleNext}
+						disabled={activeStep === steps.length}
+						>
 							{activeStep === steps.length - 1 ? 'Finish' : 'Next'}
 						</Button>
 					</Box>

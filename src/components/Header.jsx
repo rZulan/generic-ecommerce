@@ -10,6 +10,12 @@ const Header = () => {
 					<li>
 						<Link to={"/"}>Home</Link>
 					</li>
+					<li>
+						<Link to={"/item"}>Item</Link>
+					</li>
+					<li>
+						<Link to={"/checkout"}>Checkout</Link>
+					</li>
 				</ul>
 				<div className="flex flex-row gap-5">
 					<h1 className="flex-1 text-2xl text-center">E-Commerce</h1>
