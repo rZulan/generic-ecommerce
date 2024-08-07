@@ -5,6 +5,7 @@ import {
 	Paper,
 	Rating,
 	Typography,
+	useTheme,
 } from "@mui/material"
 import { useState } from "react"
 import Slider from "react-slick"
@@ -39,10 +40,15 @@ const Item = () => {
 
 	const [rating, setRating] = useState(0)
 
+	const theme = useTheme()
+
 	return (
 		<>
 			<Header />
-			<div className="w-2/3 m-auto mt-10">
+			<Box
+				className="w-2/3 m-auto mt-10"
+				sx={{ backgroundColor: theme.palette }}
+			>
 				<Paper className="flex flex-row flex-1 gap-10 py-10">
 					<div className="flex flex-col w-1/4">
 						<img src="https://picsum.photos/300/350" className="w-3/4 m-auto" />
@@ -134,31 +140,35 @@ const Item = () => {
 					<img src="https://picsum.photos/600/200" />
 				</Paper>
 				<Paper className="p-10 mt-12">
-					<h1>Ratings and review Lorem ipsum dolor sit amet consectetur.</h1>
-					<div className="flex flex-row">
+					<Typography variant="body1" sx={{ fontWeight: "bold" }}>
+						Ratings and review Lorem ipsum dolor sit amet consectetur.
+					</Typography>
+					<div className="flex flex-row gap-16 mt-4 ml-2">
 						<div>
-							<h1>4.9/5</h1>
-							<Rating value={rating} />
+							<Typography variant="body1" sx={{ fontWeight: "bold" }}>
+								4.9/5
+							</Typography>
+							<Rating value={rating} readOnly={true} />
 						</div>
 						<div>
 							<div className="flex flex-row">
-								<Rating value={5} />
+								<Rating value={5} readOnly={true} />
 								<LinearProgressWithLabel value={100} />
 							</div>
 							<div className="flex flex-row">
-								<Rating value={1} />
+								<Rating value={1} readOnly={true} />
 								<LinearProgressWithLabel value={100} />
 							</div>
 							<div className="flex flex-row">
-								<Rating value={1} />
+								<Rating value={1} readOnly={true} />
 								<LinearProgressWithLabel value={100} />
 							</div>
 							<div className="flex flex-row">
-								<Rating value={2} />
+								<Rating value={2} readOnly={true} />
 								<LinearProgressWithLabel value={100} />
 							</div>
 							<div className="flex flex-row">
-								<Rating value={1} />
+								<Rating value={1} readOnly={true} />
 								<LinearProgressWithLabel value={100} />
 							</div>
 						</div>
@@ -210,7 +220,7 @@ const Item = () => {
 						</Paper>
 					</div>
 				</Paper>
-			</div>
+			</Box>
 			<Footer />
 		</>
 	)
