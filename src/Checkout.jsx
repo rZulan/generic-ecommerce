@@ -56,16 +56,18 @@ const Checkout = () => {
 
 					<FormGroup sx={{display: activeStep === 0 ? "" : 'none',  m: 5, gap: 1}}>
 						<Typography variant='h4'>Ship to</Typography>
-						<TextField 
+						<div className='flex gap-1'>
+						<TextField sx={{width: '50%'}}
 						name='First Name'
 						label='First Name'
 						required
 						/>
-						<TextField 
+						<TextField sx={{width: '50%'}}
 						name='Last Name'
 						label='Last Name'
 						required
 						/>
+						</div>
 						<TextField 
 						name='Phone Number'
 						label='Phone Number'
@@ -120,7 +122,7 @@ const Checkout = () => {
 				</Box>
 			</div>
 			
-			<div className="flex flex-wrap h-16 bg-sky-950 mt-10">
+			<div className="flex flex-wrap h-16 bg-sky-950 mt-10 fixed bottom-0 w-full">
 			<div className="pl-10 pt-5">
 				<Typography color={'white'}>© 2024 Zulan Productions</Typography>
 			</div>

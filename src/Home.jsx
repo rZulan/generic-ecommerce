@@ -37,8 +37,23 @@ const HomePage = () => {
 			pauseOnHover: true
 		};
 
-		const [value, setValue] = useState(4);
- 		const [hover, setHover] = useState(-1);
+		const [value1, setValue1] = useState(4);
+		const [hover1, setHover1] = useState(-1);
+
+		const [value2, setValue2] = useState(4);
+		const [hover2, setHover2] = useState(-1);
+
+		const [value3, setValue3] = useState(4);
+		const [hover3, setHover3] = useState(-1);
+
+		const [value4, setValue4] = useState(4);
+		const [hover4, setHover4] = useState(-1);
+
+		const [value5, setValue5] = useState(4);
+		const [hover5, setHover5] = useState(-1);
+
+		const [value6, setValue6] = useState(4);
+		const [hover6, setHover6] = useState(-1);
 
 		return (
 		<>
@@ -68,19 +83,19 @@ const HomePage = () => {
 					>
 					<Rating
 						name="hover-feedback"
-						value={value}
+						value={value1}
 						precision={0.5}
 						getLabelText={getLabelText}
 						onChange={(event, newValue) => {
-						setValue(newValue);
+						setValue1(newValue);
 						}}
 						onChangeActive={(event, newHover) => {
-						setHover(newHover);
+						setHover1(newHover);
 						}}
 						emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
 					/>
-					{value !== null && (
-						<Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+					{value1 !== null && (
+						<Box sx={{ ml: 2 }}>{labels[hover1 !== -1 ? hover1 : value1]}</Box>
 					)}
 				</Box>
 			</div>
@@ -99,19 +114,19 @@ const HomePage = () => {
 					>
 					<Rating
 						name="hover-feedback"
-						value={value}
+						value={value2}
 						precision={0.5}
 						getLabelText={getLabelText}
 						onChange={(event, newValue) => {
-						setValue(newValue);
+						setValue2(newValue);
 						}}
 						onChangeActive={(event, newHover) => {
-						setHover(newHover);
+						setHover2(newHover);
 						}}
 						emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
 					/>
-					{value !== null && (
-						<Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+					{value2 !== null && (
+						<Box sx={{ ml: 2 }}>{labels[hover2 !== -1 ? hover2 : value2]}</Box>
 					)}
 				</Box>
 			</div>
@@ -130,19 +145,19 @@ const HomePage = () => {
 					>
 					<Rating
 						name="hover-feedback"
-						value={value}
+						value={value3}
 						precision={0.5}
 						getLabelText={getLabelText}
 						onChange={(event, newValue) => {
-						setValue(newValue);
+						setValue3(newValue);
 						}}
 						onChangeActive={(event, newHover) => {
-						setHover(newHover);
+						setHover3(newHover);
 						}}
 						emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
 					/>
-					{value !== null && (
-						<Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+					{value3 !== null && (
+						<Box sx={{ ml: 2 }}>{labels[hover3 !== -1 ? hover3 : value3]}</Box>
 					)}
 				</Box>
 			</div>
@@ -161,19 +176,19 @@ const HomePage = () => {
 					>
 					<Rating
 						name="hover-feedback"
-						value={value}
+						value={value4}
 						precision={0.5}
 						getLabelText={getLabelText}
 						onChange={(event, newValue) => {
-						setValue(newValue);
+						setValue4(newValue);
 						}}
 						onChangeActive={(event, newHover) => {
-						setHover(newHover);
+						setHover4(newHover);
 						}}
 						emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
 					/>
-					{value !== null && (
-						<Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+					{value4 !== null && (
+						<Box sx={{ ml: 2 }}>{labels[hover4 !== -1 ? hover4 : value4]}</Box>
 					)}
 				</Box>
 			</div>
@@ -192,19 +207,19 @@ const HomePage = () => {
 					>
 					<Rating
 						name="hover-feedback"
-						value={value}
+						value={value5}
 						precision={0.5}
 						getLabelText={getLabelText}
 						onChange={(event, newValue) => {
-						setValue(newValue);
+						setValue5(newValue);
 						}}
 						onChangeActive={(event, newHover) => {
-						setHover(newHover);
+						setHover5(newHover);
 						}}
 						emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
 					/>
-					{value !== null && (
-						<Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+					{value5 !== null && (
+						<Box sx={{ ml: 2 }}>{labels[hover5 !== -1 ? hover5 : value5]}</Box>
 					)}
 				</Box>
 			</div>
@@ -223,19 +238,19 @@ const HomePage = () => {
 					>
 					<Rating
 						name="hover-feedback"
-						value={value}
+						value={value6}
 						precision={0.5}
 						getLabelText={getLabelText}
 						onChange={(event, newValue) => {
-						setValue(newValue);
+						setValue6(newValue);
 						}}
 						onChangeActive={(event, newHover) => {
-						setHover(newHover);
+						setHover6(newHover);
 						}}
 						emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
 					/>
-					{value !== null && (
-						<Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+					{value6 !== null && (
+						<Box sx={{ ml: 2 }}>{labels[hover6 !== -1 ? hover6 : value6]}</Box>
 					)}
 				</Box>
 			</div>
