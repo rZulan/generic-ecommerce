@@ -122,7 +122,7 @@ const Checkout = () => {
 				</Box>
 			</div>
 			
-			<div className="flex flex-wrap h-16 bg-sky-950 mt-10">
+			<div className="flex flex-wrap h-16 bg-sky-950 mt-10 fixed bottom-0 w-full">
 			<div className="pl-10 pt-5">
 				<Typography color={'white'}>© 2024 Zulan Productions</Typography>
 			</div>
