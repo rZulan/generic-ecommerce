@@ -56,16 +56,18 @@ const Checkout = () => {
 
 					<FormGroup sx={{display: activeStep === 0 ? "" : 'none',  m: 5, gap: 1}}>
 						<Typography variant='h4'>Ship to</Typography>
-						<TextField 
+						<div className='flex gap-1'>
+						<TextField sx={{width: '50%'}}
 						name='First Name'
 						label='First Name'
 						required
 						/>
-						<TextField 
+						<TextField sx={{width: '50%'}}
 						name='Last Name'
 						label='Last Name'
 						required
 						/>
+						</div>
 						<TextField 
 						name='Phone Number'
 						label='Phone Number'
