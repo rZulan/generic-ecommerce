@@ -115,17 +115,21 @@ const Item = () => {
 					</div>
 				</Paper>
 				<Paper className="p-10 mt-12">
-					<p>Product Details Lorem ipsum dolor sit amet.</p>
+					<Typography variant="h6">
+						Product Details Lorem ipsum dolor sit amet.
+					</Typography>
 					<ul>
-						<li>
+						<Typography variant="body1">
 							• Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
 							molestias.
-						</li>
-						<li>• Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-						<li>
+						</Typography>
+						<Typography variant="body1">
+							• Lorem ipsum, dolor sit amet consectetur adipisicing.
+						</Typography>
+						<Typography variant="body1">
 							• Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab,
 							sint voluptate.
-						</li>
+						</Typography>
 					</ul>
 					<img src="https://picsum.photos/600/200" />
 				</Paper>
@@ -159,38 +163,49 @@ const Item = () => {
 							</div>
 						</div>
 					</div>
-					<div className="mt-12 mb-96">
+					<div className="mt-12">
 						<Paper elevation={3} className="p-5 my-5">
 							<Rating value={5} />
-							<h1>Lorem, ipsum.</h1>
-							<p>
+							<Typography variant="h6">Lorem, ipsum.</Typography>
+							<Typography variant="body1">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
 								ex aspernatur aut id voluptatibus aliquid, eos laudantium
 								excepturi laborum rem velit, non maiores, nulla ipsam! Odio
 								corrupti expedita exercitationem molestiae?
-							</p>
+							</Typography>
 							<img src="https://picsum.photos/150/200" />
 						</Paper>
 						<Paper elevation={3} className="p-5 my-5">
-							<Rating value={5} />
-							<h1>Lorem, ipsum.</h1>
-							<p>
+							<Rating value={1} readOnly={true} />
+							<Typography variant="h6">Lorem, ipsum.</Typography>
+							<Typography variant="body1">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
 								ex aspernatur aut id voluptatibus aliquid, eos laudantium
 								excepturi laborum rem velit, non maiores, nulla ipsam! Odio
 								corrupti expedita exercitationem molestiae?
-							</p>
+							</Typography>
 							<img src="https://picsum.photos/150/201" />
 						</Paper>
 						<Paper elevation={3} className="p-5 my-5">
-							<Rating value={5} />
-							<h1>Lorem, ipsum.</h1>
-							<p>
+							<Rating value={4} readOnly={true} />
+							<Typography variant="h6">Lorem, ipsum.</Typography>
+							<Typography variant="body1">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
 								ex aspernatur aut id voluptatibus aliquid, eos laudantium
 								excepturi laborum rem velit, non maiores, nulla ipsam! Odio
 								corrupti expedita exercitationem molestiae?
-							</p>
+							</Typography>
+							<img src="https://picsum.photos/151/200" />
+						</Paper>
+						<Paper elevation={3} className="p-5 my-5">
+							<Rating value={2} readOnly={true} />
+							<Typography variant="h6">Lorem, ipsum.</Typography>
+							<Typography variant="body1">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+								ex aspernatur aut id voluptatibus aliquid, eos laudantium
+								excepturi laborum rem velit, non maiores, nulla ipsam! Odio
+								corrupti expedita exercitationem molestiae?
+							</Typography>
 							<img src="https://picsum.photos/151/200" />
 						</Paper>
 					</div>
