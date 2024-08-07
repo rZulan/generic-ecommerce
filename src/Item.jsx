@@ -1,7 +1,14 @@
-import AccessAlarmIcon from "@mui/icons-material/AccessAlarm"
-import { Box, Button, LinearProgress, Rating, Typography } from "@mui/material"
+import {
+	Box,
+	Button,
+	LinearProgress,
+	Paper,
+	Rating,
+	Typography,
+} from "@mui/material"
 import { useState } from "react"
 import Slider from "react-slick"
+import Footer from "./components/Footer"
 import Header from "./components/Header"
 
 function LinearProgressWithLabel(props) {
@@ -21,7 +28,9 @@ function LinearProgressWithLabel(props) {
 
 const Item = () => {
 	const settings = {
-		dots: true,
+		arrows: false,
+		swipeToSlide: true,
+		dots: false,
 		infinite: true,
 		speed: 500,
 		slidesToShow: 3,
@@ -33,13 +42,12 @@ const Item = () => {
 	return (
 		<>
 			<Header />
-			<AccessAlarmIcon />
-			<div className="w-3/4 m-auto mt-10">
-				<div className="flex">
-					<div className="flex flex-col bg-slate-400">
-						<img src="https://picsum.photos/400" className="w-96" />
-						<div className="pb-10 m-auto mt-5 w-72">
-							<Slider {...settings} className="w-3/4 m-auto">
+			<div className="w-2/3 m-auto mt-10">
+				<Paper className="flex flex-row flex-1 gap-10 py-10">
+					<div className="flex flex-col w-1/4">
+						<img src="https://picsum.photos/300/350" className="w-3/4 m-auto" />
+						<div className="w-3/4 pb-10 m-auto mt-5">
+							<Slider {...settings}>
 								<div>
 									<img src="https://picsum.photos/1001" />
 								</div>
@@ -61,32 +69,52 @@ const Item = () => {
 							</Slider>
 						</div>
 					</div>
-					<div>
-						<h1>Item #1</h1>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-							labore quas nemo dicta officia accusantium quisquam quidem
-							mollitia quibusdam consequuntur?
-						</p>
-						<div className="flex flex-row">
-							<Rating
-								value={rating}
-								onChange={(event, newValue) => {
-									setRating(newValue)
-								}}
-							/>
-							<p>500 ratings</p>
+					<div className="flex flex-col">
+						<div className="flex-1">
+							<Typography variant="h3">iPhone 11</Typography>
+							<Typography variant="body1">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+								labore quas nemo dicta officia accusantium quisquam quidem
+								mollitia quibusdam consequuntur? Lorem ipsum dolor, sit amet
+								consectetur adipisicing elit. Temporibus aliquid ut corporis
+								magnam magni, ullam voluptatem labore non mollitia omnis
+								consectetur nam minus veritatis atque, alias cupiditate
+								consequatur id odio similique dolore voluptatibus quasi? Maiores
+								assumenda voluptas quam ratione numquam ea, possimus voluptatem?
+								Necessitatibus illo magnam officiis, ratione repellendus
+								possimus.
+							</Typography>
 						</div>
-						<h1>$69.00</h1>
-						<Button variant="contained">
-							<p>Buy Now</p>
-						</Button>
-						<Button variant="contained">
-							<p>Add to Cart</p>
-						</Button>
+						<div className="flex flex-col justify-end flex-1 mb-10">
+							<div className="flex flex-row gap-3 mt-10">
+								<Rating
+									value={rating}
+									onChange={(event, newValue) => {
+										setRating(newValue)
+									}}
+								/>
+								<Typography
+									variant="body1"
+									sx={{
+										fontWeight: "bold",
+									}}
+								>
+									500 ratings
+								</Typography>
+							</div>
+							<Typography variant="h5">$69.00</Typography>
+							<div className="flex flex-row gap-1">
+								<Button variant="contained">
+									<Typography variant="body2">Buy Now</Typography>
+								</Button>
+								<Button variant="contained">
+									<Typography variant="body2">Add to Cart</Typography>
+								</Button>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div className="mt-12">
+				</Paper>
+				<Paper className="p-10 mt-12">
 					<p>Product Details Lorem ipsum dolor sit amet.</p>
 					<ul>
 						<li>
@@ -100,8 +128,8 @@ const Item = () => {
 						</li>
 					</ul>
 					<img src="https://picsum.photos/600/200" />
-				</div>
-				<div className="mt-12">
+				</Paper>
+				<Paper className="p-10 mt-12">
 					<h1>Ratings and review Lorem ipsum dolor sit amet consectetur.</h1>
 					<div className="flex flex-row">
 						<div>
@@ -132,7 +160,7 @@ const Item = () => {
 						</div>
 					</div>
 					<div className="mt-12 mb-96">
-						<div className="my-5">
+						<Paper elevation={3} className="p-5 my-5">
 							<Rating value={5} />
 							<h1>Lorem, ipsum.</h1>
 							<p>
@@ -142,8 +170,8 @@ const Item = () => {
 								corrupti expedita exercitationem molestiae?
 							</p>
 							<img src="https://picsum.photos/150/200" />
-						</div>
-						<div className="my-5">
+						</Paper>
+						<Paper elevation={3} className="p-5 my-5">
 							<Rating value={5} />
 							<h1>Lorem, ipsum.</h1>
 							<p>
@@ -153,8 +181,8 @@ const Item = () => {
 								corrupti expedita exercitationem molestiae?
 							</p>
 							<img src="https://picsum.photos/150/201" />
-						</div>
-						<div className="my-5">
+						</Paper>
+						<Paper elevation={3} className="p-5 my-5">
 							<Rating value={5} />
 							<h1>Lorem, ipsum.</h1>
 							<p>
@@ -164,10 +192,11 @@ const Item = () => {
 								corrupti expedita exercitationem molestiae?
 							</p>
 							<img src="https://picsum.photos/151/200" />
-						</div>
+						</Paper>
 					</div>
-				</div>
+				</Paper>
 			</div>
+			<Footer />
 		</>
 	)
 }

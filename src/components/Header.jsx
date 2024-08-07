@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 const Header = () => {
 	return (
 		<div className="text-white bg-slate-800">
-			<div className="flex flex-row items-center w-3/4 h-16 px-10 m-auto">
+			<div className="flex flex-row items-center w-2/3 h-16 m-auto">
 				<ul className="flex flex-row flex-1 gap-5">
 					<li>
 						<Link to={"/"}>Home</Link>
