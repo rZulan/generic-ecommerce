@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Link, Rating, Typography } from "@mui/material"
+import { Box, Button, Link, Rating, Typography } from "@mui/material"
 import itemUnavailable from './assets/item sample.jpg'
 import notFound from './assets/not found.jpg'
 import noData from './assets/no data.jpg'
