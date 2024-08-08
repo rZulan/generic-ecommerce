@@ -5,12 +5,13 @@ import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';  
 import { Link } from 'react-router-dom';
-import { FormGroup, Paper, TextField } from '@mui/material';
+import { Divider, FormGroup, List, ListItem, ListItemIcon, Paper, TextField } from '@mui/material';
 import { useState } from 'react';
 import EWalletIcon from './assets/eWalletIcon.png'
 import BankIcon from './assets/bankIcon.png'
 import CODIcon from './assets/cashOnDeliveryIcon.png'
 import Header from './components/Header';
+import NoData from './assets/no data.jpg'
 
 
 const steps = ['Shipping and Gift Options', 'Payment and Billing', 'Review and Place Order'];
@@ -96,9 +97,71 @@ const Checkout = () => {
 
 					<FormGroup sx={{display: activeStep === 2 ? "" : 'none',  m: 5, gap: 1}}>
 						<Typography variant='h4'>Order Summary</Typography>
-						<div className='flex flex-wrap h-96 w-auto bg-slate-400'>
-						<Paper elevation={3} />
-						</div>	
+						<Paper>
+							
+								<Typography variant='h5' sx={{paddingTop: 1, paddingLeft: 2}}>Order No. :	9778675645342</Typography>
+								
+							
+							<Divider/>
+							<List >
+								<ListItem>
+									<img src={NoData} className='size-20 rounded-lg'/>
+									<div className='flex leading-3 pl-5 w-full'>
+										<div className='flex-1'>
+											<Typography><b>Item Name</b></Typography>
+											<Typography variant='caption' display="block">Item Details • Item Variant </Typography>
+										</div>
+										<div className='justify-end '>
+											<Typography><b>$0</b></Typography>
+											<Typography variant='caption'>Qty: 0</Typography>
+										</div>
+									</div>
+								</ListItem>
+								<ListItem>
+									<img src={NoData} className='size-20 rounded-lg'/>
+									<div className='flex leading-3 pl-5 w-full'>
+										<div className='flex-1'>
+											<Typography><b>Item Name</b></Typography>
+											<Typography variant='caption' display="block">Item Details • Item Variant </Typography>
+										</div>
+										<div className='justify-end '>
+											<Typography><b>$0</b></Typography>
+											<Typography variant='caption'>Qty: 0</Typography>
+										</div>
+									</div>
+								</ListItem>
+								<ListItem>
+									<img src={NoData} className='size-20 rounded-lg'/>
+									<div className='flex leading-3 pl-5 w-full'>
+										<div className='flex-1'>
+											<Typography><b>Item Name</b></Typography>
+											<Typography variant='caption' display="block">Item Details • Item Variant </Typography>
+										</div>
+										<div className='justify-end '>
+											<Typography><b>$0</b></Typography>
+											<Typography variant='caption'>Qty: 0</Typography>
+										</div>
+									</div>
+								</ListItem>
+							</List>
+							<Divider/>
+							<div className='pl-5 pr-5 pb-1'>
+								<div className='flex'>
+								<Typography className='h-10 pt-2.5 flex-1'><b>Subtotal</b></Typography>
+								<Typography className='h-10 pt-2.5'><b>$0</b></Typography>
+								</div>
+								<Divider/>
+								<div className='flex'>
+								<Typography className='h-10 pt-2.5 flex-1'><b>Shipping</b></Typography>
+								<Typography className='h-10 pt-2.5'><b>$0</b></Typography>
+								</div>
+								<Divider/>
+								<div className='flex'>
+								<Typography className='h-10 pt-2.5 flex-1'><b>Total</b></Typography>
+								<Typography className='h-10 pt-2.5'><b>$0</b></Typography>
+								</div>
+							</div>
+						</Paper>	
 					</FormGroup>
 					
 					<Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
