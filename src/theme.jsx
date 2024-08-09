@@ -5,7 +5,7 @@ const theme = responsiveFontSizes(
 	createTheme({
 		palette: {
 			primary: {
-				main: red[400],
+				main: red[500],
 			},
 		},
 	})

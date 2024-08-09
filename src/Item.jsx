@@ -175,7 +175,7 @@ const Item = () => {
 					</div>
 					<div className="mt-12">
 						<Paper elevation={3} className="p-5 my-5">
-							<Rating value={5} />
+							<Rating value={5} readOnly={true} />
 							<Typography variant="h6">Lorem, ipsum.</Typography>
 							<Typography variant="body1">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos

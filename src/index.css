@@ -5,3 +5,11 @@
 body {
 	background-color: rgb(245, 245, 245);
 }
+
+.slick-slide > div {
+	margin: 0 5px;
+}
+
+.slick-list {
+	margin: 0 -5px;
+}
