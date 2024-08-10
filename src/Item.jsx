@@ -188,6 +188,9 @@ const Item = () => {
 								corrupti expedita exercitationem molestiae?
 							</Typography>
 							<img src="https://picsum.photos/150/200" />
+							<div className="text-right text-gray-500">
+								<Typography variant="caption">Janury 05, 2002</Typography>
+							</div>
 						</Paper>
 						<Paper elevation={3} className="p-5 my-5">
 							<Rating value={1} readOnly={true} />
@@ -199,6 +202,9 @@ const Item = () => {
 								corrupti expedita exercitationem molestiae?
 							</Typography>
 							<img src="https://picsum.photos/150/201" />
+							<div className="text-right text-gray-500">
+								<Typography variant="caption">Janury 05, 2002</Typography>
+							</div>
 						</Paper>
 						<Paper elevation={3} className="p-5 my-5">
 							<Rating value={4} readOnly={true} />
@@ -210,6 +216,9 @@ const Item = () => {
 								corrupti expedita exercitationem molestiae?
 							</Typography>
 							<img src="https://picsum.photos/151/200" />
+							<div className="text-right text-gray-500">
+								<Typography variant="caption">Janury 05, 2002</Typography>
+							</div>
 						</Paper>
 						<Paper elevation={3} className="p-5 my-5">
 							<Rating value={2} readOnly={true} />
@@ -221,6 +230,9 @@ const Item = () => {
 								corrupti expedita exercitationem molestiae?
 							</Typography>
 							<img src="https://picsum.photos/151/200" />
+							<div className="text-right text-gray-500">
+								<Typography variant="caption">Janury 05, 2002</Typography>
+							</div>
 						</Paper>
 					</div>
 				</Paper>
