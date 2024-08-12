@@ -5,7 +5,7 @@ import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';  
 import { Link } from 'react-router-dom';
-import { Divider, FormGroup, List, ListItem, ListItemIcon, Paper, TextField } from '@mui/material';
+import { Divider, FormGroup, List, ListItem, Paper, TextField } from '@mui/material';
 import { useState } from 'react';
 import EWalletIcon from './assets/eWalletIcon.png'
 import BankIcon from './assets/bankIcon.png'
@@ -42,7 +42,7 @@ const Checkout = () => {
 			<Header/>
 
 			<div className='flex justify-center'>
-				<Box sx={{ width: '75%', paddingTop: 10}}>
+				<Box sx={{ width: '66%', paddingTop: 10}}>
 					<Stepper activeStep={activeStep}>
 						{steps.map((label) => {
 							const stepProps = {};

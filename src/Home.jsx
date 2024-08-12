@@ -28,7 +28,7 @@ function getLabelText(value) {
 
 const HomePage = () => {
 	var settings = {
-		dots: true,
+		dots: false,
 		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
@@ -67,7 +67,22 @@ const HomePage = () => {
 
 			<Header />
 
-			<div className="flex justify-center pt-10">
+			<div className="grid w-2/3 grid-cols-6 grid-rows-2 pt-5 gap-1 m-auto">
+				<div className="col-span-4 row-span-2">
+					<Link><img src="https://picsum.photos/1000/300" alt="" /></Link>
+				</div>
+
+				<div className="col-span-2">
+					<Link><img src="https://picsum.photos/1200/355" alt="" /></Link>
+				</div>
+				
+				<div className="col-span-2">
+					<Link><img src="https://picsum.photos/1200/355" alt="" /></Link>
+				</div>
+
+			</div>
+
+			<div className="flex justify-center pt-5">
 				<Typography variant="h4">New Collection</Typography>
 			</div>
 			<div className="flex justify-center">
@@ -76,7 +91,7 @@ const HomePage = () => {
 				</Typography>
 			</div>
 
-			<div className="grid w-3/4 grid-cols-3 gap-5 pt-5 m-auto text-center">
+			<div className="grid w-2/3 grid-cols-6 gap-5 pt-5 m-auto text-center">
 				<div className="grid text-left ">
 					<img src={itemUnavailable} alt="item unavailable photo" />
 					<Typography variant="h6">
@@ -341,10 +356,9 @@ const HomePage = () => {
 				</Button>
 			</div>
 
-			<div className="w-3/4 m-auto">
+			<div className="w-2/3 m-auto">
 				<div className="w-auto gap-5 pt-10 slider-container size-3/5">
 					<Slider {...settings}>
-						{/* <div className="grid w-3/4 grid-cols-3 gap-5 m-auto text-center"> */}
 						<div>
 							<img
 								src={itemUnavailable}
@@ -366,7 +380,6 @@ const HomePage = () => {
 								alt="item unavailable photo"
 							/>
 						</div>
-						{/* </div> */}
 					</Slider>
 				</div>
 			</div>
