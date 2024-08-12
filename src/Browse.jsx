@@ -29,7 +29,7 @@ const Browse = () => {
 			<div className="w-2/3 m-auto">
 				<div className="mt-12">
 					<Typography variant="h5">Flash Sale!</Typography>
-					<div className="grid grid-cols-5 gap-5">
+					<div className="grid grid-cols-5 grid-rows-6 gap-5">
 						<Card>
 							<CardMedia component={"img"} image="https://picsum.photos/500" />
 							<CardContent>
