@@ -12,6 +12,32 @@ import Slider from "react-slick"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 
+const itemData = {
+	name: "iPhone 11",
+	description:
+		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque labore quas nemo dicta officia accusantium quisquam quidem mollitia quibusdam consequuntur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus aliquid ut corporis magnam magni, ullam voluptatem labore non mollitia omnis consectetur nam minus veritatis atque, alias cupiditate consequatur id odio similique dolore voluptatibus quasi? Maiores assumenda voluptas quam ratione numquam ea, possimus voluptatem? Necessitatibus illo magnam officiis, ratione repellendus possimus.",
+	rating: {
+		star1: 5,
+		star2: 0,
+		star3: 10,
+		star4: 5,
+		star5: 50,
+	},
+	price: 69.0,
+	productDetails:
+		"• Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, molestias.\n• Lorem ipsum, dolor sit amet consectetur adipisicing.\n• Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, sint voluptate.",
+}
+
+const getTotalRating = () => {
+	let total = 0
+
+	Object.entries(itemData.rating).forEach(([key, val]) => {
+		total += val
+	})
+
+	return total
+}
+
 function LinearProgressWithLabel(props) {
 	return (
 		<Box sx={{ display: "flex", alignItems: "center" }}>
@@ -77,19 +103,8 @@ const Item = () => {
 					</div>
 					<div className="flex flex-col">
 						<div className="flex-1">
-							<Typography variant="h3">iPhone 11</Typography>
-							<Typography variant="body1">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-								labore quas nemo dicta officia accusantium quisquam quidem
-								mollitia quibusdam consequuntur? Lorem ipsum dolor, sit amet
-								consectetur adipisicing elit. Temporibus aliquid ut corporis
-								magnam magni, ullam voluptatem labore non mollitia omnis
-								consectetur nam minus veritatis atque, alias cupiditate
-								consequatur id odio similique dolore voluptatibus quasi? Maiores
-								assumenda voluptas quam ratione numquam ea, possimus voluptatem?
-								Necessitatibus illo magnam officiis, ratione repellendus
-								possimus.
-							</Typography>
+							<Typography variant="h3">{itemData.name}</Typography>
+							<Typography variant="body1">{itemData.description}</Typography>
 						</div>
 						<div className="flex flex-col justify-end flex-1 mb-10">
 							<div className="flex flex-row gap-3 mt-10">
@@ -105,10 +120,10 @@ const Item = () => {
 										fontWeight: "bold",
 									}}
 								>
-									500 ratings
+									{getTotalRating()} ratings
 								</Typography>
 							</div>
-							<Typography variant="h5">$69.00</Typography>
+							<Typography variant="h5">${itemData.price.toFixed(2)}</Typography>
 							<div className="flex flex-row gap-1">
 								<Button variant="contained">
 									<Typography variant="body2">Buy Now</Typography>
@@ -124,19 +139,8 @@ const Item = () => {
 					<Typography variant="h6">
 						Product Details Lorem ipsum dolor sit amet.
 					</Typography>
-					<ul>
-						<Typography variant="body1">
-							• Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
-							molestias.
-						</Typography>
-						<Typography variant="body1">
-							• Lorem ipsum, dolor sit amet consectetur adipisicing.
-						</Typography>
-						<Typography variant="body1">
-							• Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab,
-							sint voluptate.
-						</Typography>
-					</ul>
+					<Typography variant="body1">{itemData.productDetails}</Typography>
+
 					<img src="https://picsum.photos/600/200" />
 				</Paper>
 				<Paper className="p-10 mt-12">
@@ -151,25 +155,25 @@ const Item = () => {
 							<Rating value={rating} readOnly={true} />
 						</div>
 						<div>
-							<div className="flex flex-row">
+							<div className="flex flex-row gap-5">
 								<Rating value={5} readOnly={true} />
-								<LinearProgressWithLabel value={100} />
+								<LinearProgressWithLabel value={itemData.rating.star1} />
 							</div>
-							<div className="flex flex-row">
-								<Rating value={1} readOnly={true} />
-								<LinearProgressWithLabel value={100} />
+							<div className="flex flex-row gap-5">
+								<Rating value={4} readOnly={true} />
+								<LinearProgressWithLabel value={itemData.rating.star2} />
 							</div>
-							<div className="flex flex-row">
-								<Rating value={1} readOnly={true} />
-								<LinearProgressWithLabel value={100} />
+							<div className="flex flex-row gap-5">
+								<Rating value={3} readOnly={true} />
+								<LinearProgressWithLabel value={itemData.rating.star3} />
 							</div>
-							<div className="flex flex-row">
+							<div className="flex flex-row gap-5">
 								<Rating value={2} readOnly={true} />
-								<LinearProgressWithLabel value={100} />
+								<LinearProgressWithLabel value={itemData.rating.star4} />
 							</div>
-							<div className="flex flex-row">
+							<div className="flex flex-row gap-5">
 								<Rating value={1} readOnly={true} />
-								<LinearProgressWithLabel value={100} />
+								<LinearProgressWithLabel value={itemData.rating.star5} />
 							</div>
 						</div>
 					</div>
@@ -184,6 +188,9 @@ const Item = () => {
 								corrupti expedita exercitationem molestiae?
 							</Typography>
 							<img src="https://picsum.photos/150/200" />
+							<div className="text-right text-gray-500">
+								<Typography variant="caption">Janury 05, 2002</Typography>
+							</div>
 						</Paper>
 						<Paper elevation={3} className="p-5 my-5">
 							<Rating value={1} readOnly={true} />
@@ -195,6 +202,9 @@ const Item = () => {
 								corrupti expedita exercitationem molestiae?
 							</Typography>
 							<img src="https://picsum.photos/150/201" />
+							<div className="text-right text-gray-500">
+								<Typography variant="caption">Janury 05, 2002</Typography>
+							</div>
 						</Paper>
 						<Paper elevation={3} className="p-5 my-5">
 							<Rating value={4} readOnly={true} />
@@ -206,6 +216,9 @@ const Item = () => {
 								corrupti expedita exercitationem molestiae?
 							</Typography>
 							<img src="https://picsum.photos/151/200" />
+							<div className="text-right text-gray-500">
+								<Typography variant="caption">Janury 05, 2002</Typography>
+							</div>
 						</Paper>
 						<Paper elevation={3} className="p-5 my-5">
 							<Rating value={2} readOnly={true} />
@@ -217,6 +230,9 @@ const Item = () => {
 								corrupti expedita exercitationem molestiae?
 							</Typography>
 							<img src="https://picsum.photos/151/200" />
+							<div className="text-right text-gray-500">
+								<Typography variant="caption">Janury 05, 2002</Typography>
+							</div>
 						</Paper>
 					</div>
 				</Paper>
