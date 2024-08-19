@@ -3,12 +3,14 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Browse from "./Browse.jsx"
-import Cart from "./cart.jsx"
+import Cart from "./Cart.jsx"
 import Checkout from "./Checkout.jsx"
 import HomePage from "./Home.jsx"
 import "./index.css"
 import Item from "./Item.jsx"
 import theme from "./theme.jsx"
+import Login from "./Login.jsx"
+import Signup from "./Signup.jsx"
 
 const router = createBrowserRouter([
 	{
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
 	{
 		path: "/checkout",
 		element: <Checkout />,
+	},
+	{
+		path: "/login",
+		element: <Login />,
+	},
+	{
+		path: "/signup",
+		element: <Signup />,
 	},
 ])
 

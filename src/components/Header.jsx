@@ -52,7 +52,8 @@ const Header = () => {
 						<Link to={"/cart"}>
 							<ShoppingCartIcon />
 						</Link>
-						<h1>Logout</h1>
+						<Link to={"/login"}>Login</Link>
+						<Link to={"/signup"}>Signup</Link>
 					</div>
 				</Box>
 			</Box>
