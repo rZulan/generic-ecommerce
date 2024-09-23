@@ -14,7 +14,7 @@ const Login = () => {
       </div>
 
       <div className="flex justify-center bg-slate-400 h-full">
-        <img src={EcommerceLogo} alt="e-commerce logo" />
+        <img className="mr-16" src={EcommerceLogo} alt="e-commerce logo" />
         <Paper className="w-96 mt-10 mb-10 pt-5 pl-5 pr-5 h-fit">
           <Typography variant="h6" className="flex pb-5 justify-center">Login</Typography>
           <div className="flex flex-col gap-7">

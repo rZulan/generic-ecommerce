@@ -27,6 +27,7 @@ function getLabelText(value) {
 }
 
 const HomePage = () => {
+
 	var settings = {
 		dots: false,
 		infinite: true,
