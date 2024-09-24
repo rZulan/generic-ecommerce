@@ -10,6 +10,7 @@ import {
 import Slider from "react-slick"
 import Header from "./components/Header"
 import "./styles/browse.css"
+import { useGetAllProductsQuery } from "./redux/api/productsAPI"
 
 const settings = {
 	dots: false,
@@ -21,52 +22,10 @@ const settings = {
 	swipeToSlide: true,
 }
 
-const items = {
-	item1: {
-		name: "iPhone 11",
-	},
-	item2: {
-		name: "iPhone 12",
-	},
-	item3: {
-		name: "iPhone 13",
-	},
-	item4: {
-		name: "iPhone 14",
-	},
-	item5: {
-		name: "iPhone 15",
-	},
-	item6: {
-		name: "iPhone 15",
-	},
-	item7: {
-		name: "iPhone 15",
-	},
-	item8: {
-		name: "iPhone 15",
-	},
-	item9: {
-		name: "iPhone 15",
-	},
-	item10: {
-		name: "iPhone 15",
-	},
-	item11: {
-		name: "iPhone 15",
-	},
-	item12: {
-		name: "iPhone 15",
-	},
-	item13: {
-		name: "iPhone 15",
-	},
-	item14: {
-		name: "iPhone 15",
-	},
-}
-
 const Browse = () => {
+	const { data } = useGetAllProductsQuery()
+	console.log(data)
+
 	return (
 		<>
 			<Header />
@@ -247,22 +206,23 @@ const Browse = () => {
 				</div>
 				<div>
 					<Typography variant="h5">Just For You!</Typography>
-					<div className="grid grid-cols-7 gap-5">
-						{Object.keys(items).map((item, i) => (
+					<div className="grid grid-cols-7 gap-5 pt-5">
+						{data?.map((item, i) => (
 							<CardActionArea key={i}>
 								<Card>
 									<CardMedia
 										component={"img"}
-										image="https://picsum.photos/600"
+										image={item.image}
+										sx={{padding: "1em 1em 0 1em", objectFit: 'contain', height: 185}}
 									/>
 									<CardContent>
-										<Typography variant="body1">{item}</Typography>
+										<Typography variant="body1" className="truncate">{item.title}</Typography>
 										<Typography variant="body1">
-											<b>$69.00</b>
+											<b>${item.price}</b>
 										</Typography>
 										<div className="flex flex-row">
-											<Rating value={5} readOnly={true} size="small" />
-											<Typography variant="caption">(50 Ratings)</Typography>
+											<Rating value={item.rating.rate} readOnly={true} size="small" />
+											<Typography variant="caption">({item.rating.count} Ratings)</Typography>
 										</div>
 									</CardContent>
 								</Card>

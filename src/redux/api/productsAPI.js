@@ -11,8 +11,9 @@ const productsAPI = fakeStoreAPI
                 params
             }),
             providesTags: ["products"],
-        })
+        }),
+
     })
 })
 
-export const { useGetAllProductsQuery } = productsAPI
+export const { useGetAllProductsQuery, useGetSingleProductQuery } = productsAPI
