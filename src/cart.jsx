@@ -17,7 +17,7 @@ const Cart = () => {
 
   return (
     <>
-    <div className="flex justify-center h-8 bg-sky-950">
+      <div className="flex justify-center h-8 bg-sky-950">
 				<div className="pt-1">
 					<Typography color={"white"}>
 						Get up to 70% off on selected items!

@@ -1,9 +1,10 @@
 import { Button, Card, CardActionArea, CardContent, CardMedia, Link, Rating, Typography } from '@mui/material'
 import { useGetAllProductsQuery } from './redux/api/productsAPI'
 import Header from './components/Header'
+import LoadingSkeleton from './components/LoadingSkeleton'
 
 const HomeTesting = () => {   
-    const { data } = useGetAllProductsQuery()
+    const { data, isFetching } = useGetAllProductsQuery()
     console.log(data)
 
   return (
@@ -41,7 +42,9 @@ const HomeTesting = () => {
             </Typography>
         </div>
 
-        <div className="grid w-2/3 grid-cols-5 gap-3 pt-5 m-auto text-center" >
+            {isFetching ? <LoadingSkeleton/> :  (
+                <>
+                <div className="grid w-2/3 grid-cols-5 gap-3 pt-5 m-auto text-center" >
                 {data?.map((products) => {
                      return (
                      <>
@@ -79,7 +82,10 @@ const HomeTesting = () => {
                      </>
                     )
                 })}
-        </div>
+                </div>
+                </>
+                )}
+
 
         <div className="flex justify-center pt-10">
 				<Typography variant="h4">Other Collection</Typography>

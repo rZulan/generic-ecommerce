@@ -70,7 +70,16 @@ const Item = () => {
 
 	return (
 		<>
+			<div className="flex justify-center h-8 bg-sky-950">
+				<div className="pt-1">
+					<Typography color={"white"}>
+						Get up to 70% off on selected items!
+					</Typography>
+				</div>
+			</div>
+
 			<Header />
+			
 			<Box
 				className="w-2/3 m-auto mt-10"
 				sx={{ backgroundColor: theme.palette }}
